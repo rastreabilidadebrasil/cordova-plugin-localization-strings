@@ -14,9 +14,9 @@
     <hook src="scripts/create_ios_strings.js" type="after_prepare" />
   </platform>
 
-  <platform name="android">
+  <!--platform name="android">
     <hook src="scripts/create_android_strings.js" type="after_prepare" />
-  </platform>
+  </platform -->
 
 
 </plugin>
