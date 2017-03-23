@@ -95,7 +95,7 @@ module.exports = function(context) {
 
     getTargetLang(context)
         .then(function(languages) {
-            console.log('tes');
+
             try {
                 languages.forEach(function (lang) {
 
@@ -148,11 +148,11 @@ function getTargetLang(context) {
     var deferred = context.requireCordovaModule('q').defer();
     var path = context.requireCordovaModule('path');
     var glob = context.requireCordovaModule('glob');
-    console.log('teste');
+
 
     glob("translations/app/*.json",
         function(err, langFiles) {
-            console.log('teste1');
+
             if(err) {
                 deferred.reject(err);
             }
@@ -161,7 +161,7 @@ function getTargetLang(context) {
                 try{
                     langFiles.forEach(function(langFile) {
                         var matches = langFile.match(/translations\/app\/(.*).json/);
-                        console.log(matches);
+
                         if (matches) {
                             targetLangArr.push({
                                 lang: matches[1],
